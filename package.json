@@ -1,5 +1,5 @@
 {
-  "name": "markdown-parser-fcc",
+  "name": "fcc-markdown-parser",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
