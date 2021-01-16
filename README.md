@@ -1,4 +1,4 @@
-# Markdown parser FCC
+# FCC - Markdown parser
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 It uses tailwind CSS and marked.
