@@ -1,8 +1,10 @@
-export const defaultEditorValue = `# H1
+export const defaultEditorValue = `[FCC url](http://www.freecodecamp.com)
+![FCC logo](https://design-style-guide.freecodecamp.org/downloads/fcc_secondary_large.png)
 
+# H1
 ## H2
-
-[FCC URL](http://www.freecodecamp.com)
+### H3
+#### H4 H5 H6
 
 \`inline code\`
 
@@ -10,11 +12,18 @@ export const defaultEditorValue = `# H1
 const code = 'block';
 \`\`\`
 
-- List item 1
-- List item 2
+- Unordered list item 1
+- Unordered list item 2
 
-> blockquote
+1. Ordered list item 1
+2. Ordered list item 2
 
-**bold text**
 
-![FCC LOGO](https://design-style-guide.freecodecamp.org/downloads/fcc_secondary_large.png)`;
+> Blockquote
+
+**Bold text**
+__Bold text alternative__
+*Italic text*
+_Italic text alternative_
+***Italic bold text***
+___Italic bold text alternative___`;
