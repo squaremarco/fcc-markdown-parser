@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { useCallback, useState } from 'react';
+import marked from 'marked';
+
+import { defaultEditorValue } from './consts';
+import PageComponent from './PageComponent';
+import EditorComponent from './EditorComponent';
+import PreviewComponent from './PreviewComponent';
 
 function App() {
+  const [editorValue, setEditorValue] = useState(defaultEditorValue);
+  const handleOnChange = useCallback((ev) => setEditorValue(ev.target.value), [setEditorValue]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <PageComponent title="Markdown editor!">
+      <EditorComponent value={editorValue} onChange={handleOnChange} />
+      <PreviewComponent __html={marked(editorValue, { breaks: true })} />
+    </PageComponent>
   );
 }
 
